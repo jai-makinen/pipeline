@@ -13,7 +13,7 @@ jobs:
       - id: step2
         run: echo "test=world" >> "$GITHUB_OUTPUT"
              echo "value=$GITHUB_RUN_NUMBER" >> "$GITHUB_OUTPUT"
-             if [[ "$OUTPUT1" == *"hello"* ]] then echo "tst=true" >> GITHUB_OUTPUT  else echo "tst=false" >> GITHUB_OUTPUT; fi
+             if [[ "$OUTPUT1" == *"hello"* ]] then echo "tst=true" >> GITHUB_OUTPUT  else echo "tst=false" >> GITHUB_OUTPUT fi
   job2:
     runs-on: ubuntu-latest
     needs: job1
