@@ -14,9 +14,9 @@ jobs:
         run: echo "test=world" >> "$GITHUB_OUTPUT"
              echo "value=$GITHUB_RUN_NUMBER" >> "$GITHUB_OUTPUT"
       - id: step3
-      #if: [[ "$OUTPUT1" == "hello" ]]  echo "tst=true" >> GITHUB_OUTPUT  else echo "tst=false" >> GITHUB_OUTPUT fi
-        run: echo ${{ steps.step2.outputs.tst }}
-             
+        # if: [[ "$OUTPUT1" == "hello" ]]  echo "tst=true" >> GITHUB_OUTPUT  else echo "tst=false" >> GITHUB_OUTPUT fi
+        run: echo "tst={steps.step3.outputs.tst" fi
+                     
   job2:
     runs-on: ubuntu-latest
     needs: job1
