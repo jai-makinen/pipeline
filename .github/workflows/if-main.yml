@@ -13,4 +13,8 @@ jobs:
       - id: step2
         run: echo "value=$GITHUB_RUN_NUMBER" >> "$GITHUB_OUTPUT"
       - id: step3
-        run: if [[${ steps.step1.outputs.test } == "hello" ]]; then echo "tst=true" >> GITHUB_OUTPUT;  else echo "tst=false" >> GITHUB_OUTPUT fi
+        run: 
+          if [[${ steps.step1.outputs.test } == "hello" ]]; 
+           then echo "T" 
+           else echo "F" 
+          fi
