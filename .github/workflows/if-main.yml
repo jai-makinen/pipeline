@@ -1,4 +1,4 @@
-name: run-if-trial
+name: if-trial
 on: [push]
 jobs:
   job1:
@@ -13,4 +13,4 @@ jobs:
       - id: step2
         run: echo "value=$GITHUB_RUN_NUMBER" >> "$GITHUB_OUTPUT"
       - id: step3
-        # if: [[${ steps.step1.outputs.test } == "hello" ]]  echo "tst=true" >> GITHUB_OUTPUT  else echo "tst=false" >> GITHUB_OUTPUT fi
+        run: if [[${ steps.step1.outputs.test } == "hello" ]]; then echo "tst=true" >> GITHUB_OUTPUT;  else echo "tst=false" >> GITHUB_OUTPUT fi
