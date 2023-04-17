@@ -1,0 +1,16 @@
+name: run-if-trial
+on: [push]
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    # Map a step output to a job output
+    outputs:
+      output1: ${{ steps.step1.outputs.test }}
+      
+    steps:
+      - id: step1
+        run: echo "test=hello" >> "$GITHUB_OUTPUT"
+      - id: step2
+        run: echo "value=$GITHUB_RUN_NUMBER" >> "$GITHUB_OUTPUT"
+      - id: step3
+        # if: [[${ steps.step1.outputs.test } == "hello" ]]  echo "tst=true" >> GITHUB_OUTPUT  else echo "tst=false" >> GITHUB_OUTPUT fi
