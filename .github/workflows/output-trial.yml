@@ -1,4 +1,4 @@
-name: output-trial
+name: if-trial
 on: [push]
 jobs:
   job1:
