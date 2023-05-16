@@ -9,7 +9,9 @@ jobs:
       output2: ${{ steps.step2.outputs.test }}
     steps:
       - id: step1
+        shell: bash
         run: echo "test=hello" >> "$GITHUB_OUTPUT"
+             cat /etc/os-release | grep PRETTY_NAME
       - id: step2
         run: echo "test=world" >> "$GITHUB_OUTPUT"
              echo "value=$GITHUB_RUN_NUMBER" >> "$GITHUB_OUTPUT"
