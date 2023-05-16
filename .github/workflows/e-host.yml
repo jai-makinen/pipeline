@@ -5,8 +5,8 @@ name: echo-host
 on: [push]
 jobs:
   echo-host:
-  runs-on: ubuntu-latest
-  steps:
+    runs-on: ubuntu-latest
+    steps:
       - id: step1
         shell: bash
         run: cat /etc/os-release | grep PRETTY_NAME 
