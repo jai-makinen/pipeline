@@ -4,8 +4,8 @@ name: echo-host
 
 on: [push]
 jobs:
-  job1:
-    runs-on: ubuntu-latest
+  echo-host:
+  runs-on: ubuntu-latest
   steps:
       - id: step1
         shell: bash
