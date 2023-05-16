@@ -10,9 +10,11 @@ jobs:
       - id: step1
         shell: bash
         run: cat /etc/os-release | grep PRETTY_NAME 
-   echo-win:
+  echo-win:
      runs-on: windows-latest
-     shell: powershell
-     run: Get-ItemProperty "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion" | Format-List ProductName
+     steps:
+       - id: step-win
+         shell: powershell
+         run: Get-ItemProperty "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion" | Format-List ProductName
              
       
