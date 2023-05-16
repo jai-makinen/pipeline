@@ -1,0 +1,14 @@
+# This is a basic workflow to help you get started with Actions
+
+name: echo-host
+
+on: [push]
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+  steps:
+      - id: step1
+        shell: bash
+        run: cat /etc/os-release | grep PRETTY_NAME 
+             
+      
