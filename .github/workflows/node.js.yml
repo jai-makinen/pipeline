@@ -5,7 +5,7 @@ name: Node.js ci (for dependabot)
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "main" , "jai-makinen-node-flow"]
   pull_request:
     branches: [ "main" ]
 
